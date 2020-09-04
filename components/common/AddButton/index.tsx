@@ -19,26 +19,26 @@ const Button: React.FC<IProps> = ({
   onChange,
   onClick,
 }) => (
-  <StyledContainer>
-    <StyledInput
-      value={value}
-      onChange={(e) => {
-          const result = e.target.value.replace(/\D/g, '').substr(0, 3)
-          if (result.length) {
-            onChange(Number(result))
-          } else {
-            onChange(0)
-          }
-        }}
-      aria-label={inputLabel}
-    />
-    <StyledButton
-      fullWidth={fullWidth}
-      onClick={onClick}
-    >
-      {label}
-    </StyledButton>
-  </StyledContainer>
+    <StyledContainer>
+        <StyledInput
+          value={value}
+          onChange={(e) => {
+              const result = e.target.value.replace(/\D/g, '').substr(0, 3)
+              if (result.length) {
+                onChange(Number(result))
+              } else {
+                onChange(0)
+              }
+            }}
+          aria-label={inputLabel}
+        />
+        <StyledButton
+          fullWidth={fullWidth}
+          onClick={onClick}
+        >
+            {label}
+        </StyledButton>
+    </StyledContainer>
   )
 
 Button.defaultProps = {
