@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "airbnb-typescript"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "rules": {
+        "react/jsx-props-no-spreading": "off",
+        "import/no-cycle": "off",
+        // The indent rule doesn't go well with styled-components syntax
+        "@typescript-eslint/indent": "off",
+        "semi": [2, "never"],
+        "@typescript-eslint/semi": "off",
+        "react/prop-types": "off",
+        "react/jsx-indent": [2, 4]
+    }
+}

@@ -1,19 +1,19 @@
-import * as React from 'react';
+import * as React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import Button, { IProps } from '.';
+import Button, { IProps } from '.'
 
 export default {
   title: 'atoms/Add Button',
   component: Button,
   args: {
     label: 'Add to cart',
-    inputLabel: 'Amount to add'
+    inputLabel: 'Amount to add',
   },
   argTypes: {
     onClick: {
-      action: 'onClick'
-    }
+      action: 'onClick',
+    },
   },
   parameters: {
     backgrounds: {
@@ -21,10 +21,10 @@ export default {
         { name: 'gray', value: '#eee' },
       ],
     },
-  }
-} as Meta;
+  },
+} as Meta
 
-const Template: Story<IProps> = (args) => <Button {...args}></Button>;
+const Template: Story<IProps> = (args) => <Button {...args} />
 
 export const Default = Template.bind({})
 

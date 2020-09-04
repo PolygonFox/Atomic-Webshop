@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { IProps } from '.'
 
 export const StyledContainer = styled.div`
     display: flex;
@@ -22,7 +21,7 @@ export const StyledInput = styled.input`
     }
 `
 
-export const StyledButton = styled.button<IProps>`
+export const StyledButton = styled.button<{ fullWidth: boolean }>`
 
     border: none;
     border-radius: 0 8px 8px 0;
@@ -46,7 +45,7 @@ export const StyledButton = styled.button<IProps>`
         outline: none;
     }
 
-    ${props => props.fullWidth &&
-        css`width: 100%;`
+    ${(props) => props.fullWidth
+        && css`width: 100%;`
     }
 `
